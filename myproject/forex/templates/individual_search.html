@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>個別銘柄検索（東京証券取引所）</title>
+</head>
+<body>
+    <h1>個別銘柄の検索（東京証券取引所）</h1>
+    <form method="get" action="{% url 'individual_result' %}">
+        銘柄のティッカーシンボル: <input type="text" name="ticker" required><br>
+        開始日: <input type="date" name="start" required><br>
+        終了日: <input type="date" name="end" required><br>
+        <input type="submit" value="検索">
+    </form>
+    <br>
+    <a href="/">戻る</a>
+</body>
+</html>

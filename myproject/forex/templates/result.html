@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>検索結果</title>
+</head>
+<body>
+    <h1>検索結果</h1>
+    
+    <!-- ドル円相場の結果 -->
+    <h2>ドル円相場</h2>
+    <p>最高値: {{ usd_jpy_max_high }} 円 ({{ usd_jpy_max_high_date }})</p>
+    <p>最低値: {{ usd_jpy_min_low }} 円 ({{ usd_jpy_min_low_date }})</p>
+    <h3>ドル円為替レートのグラフ</h3>
+    <img src="data:image/png;base64,{{ usd_jpy_plot_url }}">
+    
+    <!-- 日経平均株価の結果 -->
+    <h2>日経平均株価</h2>
+    <p>最高値: {{ nikkei_max_high }} 円 ({{ nikkei_max_high_date }})</p>
+    <p>最低値: {{ nikkei_min_low }} 円 ({{ nikkei_min_low_date }})</p>
+    <h3>日経平均株価のグラフ</h3>
+    <img src="data:image/png;base64,{{ nikkei_plot_url }}">
+    
+    <br><br>
+    <a href="/">戻る</a>
+</body>
+</html>

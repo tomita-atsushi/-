@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>個別銘柄検索結果</title>
+</head>
+<body>
+    <h1>{{ ticker }} の株価情報</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% else %}
+        <p><strong>会社名:</strong> {{ longName }}</p>
+        <p><strong>現在の株価:</strong> {{ current_price }}</p>
+        <p><strong>実質配当利回り:</strong> {{ dividend_yield }}</p>
+        <img src="data:image/png;base64,{{ stock_plot_url }}" alt="{{ ticker }} のローソク足チャート">
+    {% endif %}
+    <br><br>
+    <a href="{% url 'individual_search' %}">別の銘柄を検索</a><br>
+    <a href="/">戻る</a>
+</body>
+</html>
+
